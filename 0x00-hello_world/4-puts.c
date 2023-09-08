@@ -1,12 +1,11 @@
 #include <stdio.h>
 /**
- * this describe
+ * Description: this describe how to print with puts function using return value 0
  *
- * how to print with puts function
+ * Return value: Always return 0
  *
- * using return value 0
- *
- **/
+ * Entry point - main
+ */
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
