@@ -1,11 +1,13 @@
 #include <stdio.h>
 /**
- * this documintions 
- * what the code do 
- * this is entry point 
- */
+* main - Entry point
+*
+* Description: this print using printf
+*
+* Returen: 0
+*/
 int main(void)
 {
 	printf("with proper grammar, but the outcome is a piece of art.\n");
-		return (0);
+	return (0);
 }
