@@ -1,10 +1,10 @@
 #include <stdio.h>
 /**
- * Description: this describe how to print with puts function using return value 0
+ * main - Entrt point
  *
- * Return value: Always return 0
+ * Description: this describes how to print with puts function.
  *
- * Entry point - main
+ * Return: Always return0
  */
 int main(void)
 {
