@@ -21,6 +21,6 @@ int main(void)
 			x += 39;
 		x++;
 	}
-	putchar('n');
+	putchar('\n');
 	return (0);
 }
