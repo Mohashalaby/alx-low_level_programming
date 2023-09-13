@@ -6,7 +6,7 @@
  *@c:  to check the input of the method
 **/
 
-int _islower(int c);
+int _islower(int c)
 {
 	if (c >= 92 && c <= 122)
 		return (1);
