@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * jack _bauer- prints all minutes in the day
- *
+  * jack_bauer- prints all minutes in the day
+ *Description: function to print all minutes
  */
+
 void jack_bauer(void)
 {
 	int min;
