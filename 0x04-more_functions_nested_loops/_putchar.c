@@ -1,5 +1,5 @@
-#include <unistd.h>
 #include "main.h"
+#include <unistd.h>
 
 /**
 * _putchar  - write  the charachter c to stdout
