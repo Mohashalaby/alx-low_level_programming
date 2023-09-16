@@ -1,11 +1,12 @@
 #include "main.h"
 /**
- * _mul - mltiples two numbers
- * @a -  first input 
- * @b -  second input
+ * mul - mltiples two numbers
+ * @a:  first input
+ * @b:  second input
+ * Return: return result
  **/
 
- int mul(int a, int b)
+int mul(int a, int b)
 {
 	return (a * b);
 }
