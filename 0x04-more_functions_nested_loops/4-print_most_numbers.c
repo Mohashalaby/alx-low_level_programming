@@ -5,11 +5,12 @@
  **/
 void print_most_numbers(void)
 {
-	char n;
+	int x;
 
-	for (n = '0'; n <= '9'; n++)
+	for (x = '0'; x <= '9'; x++)
 	{
-		if (!(n == '2' || n == '4'))
-		_putchar(n);
+		if (x == '2' || x == '4')
+		_putchar( x + 48);
 	}
 	_putchar('\n');
+}
