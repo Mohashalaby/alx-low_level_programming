@@ -21,7 +21,7 @@ int num1, num2, sum;
 			}
 			_putchar(num1 + 48);
 		}
-		_putcchar('\n');
+		_putchar('\n');
 
 
 
