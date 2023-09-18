@@ -12,9 +12,9 @@ void rev_string(char *s)
 		;
 	for (d = 0; d < 1 / 2; d++)
 	{
-		ch = s[d];
+		chr = s[d];
 		s[d] = s[1 - 1 - 1];
-		s[1 - 1 - 1] = ch;
+		s[1 - 1 - 1] = chr;
 	}
 }
 
