@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 /**
  * *_strcpy - copy astring pointed to src
  * @dest: char that type a string
