@@ -4,8 +4,8 @@
  *                      overwriting the terminating null byte
  *@dest: pointer to destinition input
  * @src: pointer to source input
- * Returen: dest
- **/
+ * Return: pointer for string dest
+**/
 char *_strcat(char *dest, char *src)
 {
 	int i, x;
@@ -13,9 +13,9 @@ char *_strcat(char *dest, char *src)
 	i = 0;
 
 	while (dest[i])
-		i++
+		i++;
 
-			for (x = 0; src[x] ; x+)
+			for (x = 0; src[x] ; x++)
 				dest[i++] = src[x];
 	return (dest);
 }
