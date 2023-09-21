@@ -1,9 +1,10 @@
 #include "main.h"
 /**
- * __strncat - to concatonaties two strings
+ *_strncat - to concatonaties two strings
  * @dest: pointer to destnation input
  * @src: pointer to source
  * @n: numbers of bytes
+ * Return: @dest
  */
 char *_strncat(char *dest, char *src, int n)
 {
