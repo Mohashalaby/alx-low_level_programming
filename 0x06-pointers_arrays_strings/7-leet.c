@@ -10,12 +10,13 @@ char *leet(char *c)
 	char kys[] = {'A', 'E', 'O', 'T', 'L'};
 		int value[] = {4, 3, 0, 7, 1};
 			unsigned int i;
+
 			while (*c)
 			{
 				for (i = 0; i< sizeof (kys) / sizeof(char); i++)
-					if (*c == kys[i] || *c == key[i] + 32)
+					if (*c == kys[i] || *c == kys[i] + 32)
 					{
-						*c = 48 = value[i];
+						*c = 48 + value[i];
 					}
 			}
 			c++
