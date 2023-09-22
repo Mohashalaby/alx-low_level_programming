@@ -22,5 +22,5 @@ char *cap_string(char *c)
 			fDlimit = 0;
 		c++;
 	}
-	return (*ptr);
+	return (ptr);
 }
