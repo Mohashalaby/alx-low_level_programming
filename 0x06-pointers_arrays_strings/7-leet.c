@@ -8,7 +8,7 @@ char *leet(char *c)
 {
 	char *ch = c;
 	char kys[] = {'A', 'E', 'O', 'T', 'L'};
-		int value[] = {4, 3, 0, 7, 1);
+		int value[] = {4, 3, 0, 7, 1};
 			unsigned int i;
 			while (*c)
 			{
