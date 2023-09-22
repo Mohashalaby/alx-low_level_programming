@@ -15,7 +15,7 @@ unsigned int i;
 	while (*c)
 	{
 
-		for (i = 0; i < sizeof(key) / sizeof(char); i++)
+		for (i = 0; i < sizeof(kys) / sizeof(char); i++)
 		{
 
 			if (*c == kys[i] || *c == kys[i] + 32)
