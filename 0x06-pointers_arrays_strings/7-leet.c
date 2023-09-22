@@ -2,7 +2,6 @@
 /**
  * leet - encodes astring to 1337
  * @c:  string
-<<<<<<< HEAD
  * Return: encoded string
  **/
 char *leet(char *c)
