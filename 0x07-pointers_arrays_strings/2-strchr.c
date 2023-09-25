@@ -11,7 +11,7 @@ char *_strchr(char *s, char c)
 {
 	int pptr;
 
-	for (pptr = 0; s[pptr] = '\0' ; pptr++)
+	for (pptr = 0; s[pptr] >= '\0' ; pptr++)
 	{
 		if (s[pptr] == c)
 		{
