@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 /**
- *
  * main - print number of arguments
  * @argc: number of arguments
  * @argv: number of arrays
