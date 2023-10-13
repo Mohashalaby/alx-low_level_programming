@@ -1,9 +1,11 @@
 #include "main.h"
+#include <stdlib.h>
+
 /**
  * malloc_checked - to allocate amemory using malloc
  * @b: int
  * Return: pointer to the array NULL
- **/
+ */
 
 void *malloc_checked(unsigned int b)
 {

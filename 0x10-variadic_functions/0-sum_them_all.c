@@ -4,7 +4,7 @@
  * sum_them_all.c - returns the sum of all its parameters
  * @n: numbers of arguments
  * @...: the integers to sum
- * Return: integer
+ * Return: if n == 0 - 0
  **/
 int sum_them_all(const unsigned int n, ...)
 {
