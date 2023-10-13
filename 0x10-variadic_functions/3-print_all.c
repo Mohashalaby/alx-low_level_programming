@@ -58,7 +58,7 @@ void print_all(const char * const format, ...)
 		{"f", format_float},
 		{"s", format_string},
 		{NULL, NULL}
-	}
+	};
 	va_start(ap, format);
 	while (format && format[i])
 	{
