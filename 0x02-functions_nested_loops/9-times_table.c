@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * times_table -print atime table
  * Description: It prints 9 times table starting with 0
