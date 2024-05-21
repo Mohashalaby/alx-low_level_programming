@@ -1,52 +1,53 @@
-nclude "lists.h"
+#include "lists.h"
 
 /**
- *  * delete_dnodeint_at_index - deletes the node at index of a
- *   * dlistint_t linked list
- *    *
- *     * @head: head of the list
- *      * @index: index of the new node
- *       * Return: 1 if it succeeded, -1 if it failed
- *        */
-int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
+ * insert_dnodeint_at_index - inserts a node node at a given position
+ * in a dlistint_t list.
+ * @h: pointer to the list.
+ * @idx: position to add the node.
+ * @n: data for the new node.
+ * Return: the address of the new node, or NULL if it failed
+ **/
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-		dlistint_t *h1;
-			dlistint_t *h2;
-				unsigned int i;
+	dlistint_t *aux_node = *h, *new_node;
+	unsigned int index, cont = 0;
 
-					h1 = *head;
+	/* create node */
+	new_node = malloc(sizeof(dlistint_t));
+	if (new_node == NULL)
+		return (NULL);
+	new_node->n = n;
 
-						if (h1 != NULL)
-									while (h1->prev != NULL)
-													h1 = h1->prev;
+	/* border case for insert at the beginning */
+	if (idx == 0)
+	{
+		new_node->prev = NULL;
+		new_node->next = *h;
+		if (*h)
+			(*h)->prev = new_node;
+		*h = new_node;
+		return (*h);
+	}
 
-							i = 0;
+	/* search of position to insert */
+	index = idx - 1;
+	while (aux_node && cont != index)
+	{
+		cont++;
+		aux_node = aux_node->next;
+	}
 
-								while (h1 != NULL)
-										{
-													if (i == index)
-																{
-																				if (i == 0)
-																								{
-																													*head = h1->next;
-																																	if (*head != NULL)
-																																							(*head)->prev = NULL;
-																																				}
-																							else
-																											{
-																																h2->next = h1->next;
-
-																																				if (h1->next != NULL)
-																																										h1->next->prev = h2;
-																																							}
-
-																										free(h1);
-																													return (1);
-																															}
-															h2 = h1;
-																	h1 = h1->next;
-																			i++;
-																				}
-
-									return (-1);
+	/* general case */
+	if (cont == index && aux_node)
+	{
+		new_node->prev = aux_node;
+		new_node->next = aux_node->next;
+		if (aux_node->next)
+			aux_node->next->prev = new_node;
+		aux_node->next = new_node;
+		return (new_node);
+	}
+	free(new_node);
+	return (NULL);
 }
