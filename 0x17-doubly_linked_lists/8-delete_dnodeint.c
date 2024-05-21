@@ -1,53 +1,47 @@
+/*
+ * File: 8-delete_dnodeint.c
+ * Auth: Brennan D Baraban
+ */
+
 #include "lists.h"
 
 /**
- * insert_dnodeint_at_index - inserts a node node at a given position
- * in a dlistint_t list.
- * @h: pointer to the list.
- * @idx: position to add the node.
- * @n: data for the new node.
- * Return: the address of the new node, or NULL if it failed
- **/
-dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
+ * delete_dnodeint_at_index - Deletes a node from a dlistint_t
+ *                            at a given index.
+ * @head: A pointer to the head of the dlistint_t.
+ * @index: The index of the node to delete.
+ *
+ * Return: Upon success - 1.
+ *         Otherwise - -1.
+ */
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *aux_node = *h, *new_node;
-	unsigned int index, cont = 0;
+	dlistint_t *tmp = *head;
 
-	/* create node */
-	new_node = malloc(sizeof(dlistint_t));
-	if (new_node == NULL)
-		return (NULL);
-	new_node->n = n;
+	if (*head == NULL)
+		return (-1);
 
-	/* border case for insert at the beginning */
-	if (idx == 0)
+	for (; index != 0; index--)
 	{
-		new_node->prev = NULL;
-		new_node->next = *h;
-		if (*h)
-			(*h)->prev = new_node;
-		*h = new_node;
-		return (*h);
+		if (tmp == NULL)
+			return (-1);
+		tmp = tmp->next;
 	}
 
-	/* search of position to insert */
-	index = idx - 1;
-	while (aux_node && cont != index)
+	if (tmp == *head)
 	{
-		cont++;
-		aux_node = aux_node->next;
+		*head = tmp->next;
+		if (*head != NULL)
+			(*head)->prev = NULL;
 	}
 
-	/* general case */
-	if (cont == index && aux_node)
+	else
 	{
-		new_node->prev = aux_node;
-		new_node->next = aux_node->next;
-		if (aux_node->next)
-			aux_node->next->prev = new_node;
-		aux_node->next = new_node;
-		return (new_node);
+		tmp->prev->next = tmp->next;
+		if (tmp->next != NULL)
+			tmp->next->prev = tmp->prev;
 	}
-	free(new_node);
-	return (NULL);
+
+	free(tmp);
+	return (1);
 }
